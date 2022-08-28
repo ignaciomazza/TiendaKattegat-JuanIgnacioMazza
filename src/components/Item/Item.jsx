@@ -1,4 +1,5 @@
 import './Item.css';
+import { Link } from "react-router-dom";
 
 function Item(props) {
 
@@ -10,7 +11,7 @@ function Item(props) {
         <div className='comprar'>
             <h5>{title}</h5>
             <p>{price}</p>
-            <input type="button" value="Ver detalles de producto"/>
+            <Link to={`item-detail/${id}`}><input type="button" value="Ver detalles de producto"/></Link>
             <p className='stock'>Stock disponible: {stock}</p>
         </div>
     </div>

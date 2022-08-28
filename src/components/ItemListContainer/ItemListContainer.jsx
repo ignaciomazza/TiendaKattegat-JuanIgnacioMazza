@@ -1,12 +1,7 @@
 import './ItemListContainer.css';
 import ItemList from './../ItemList/ItemList.jsx';
 import React, { useState, useEffect } from 'react';
-
-const data = [
-  {id : "1", tittle : "Patagonia Sendero Sur", price : "$230", pictureUrl : "https://media.tada.com.ar/produc_variant/00000484_bdcb56ce-a437-48f3-a96b-916a2841cf9b.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2", stock: "23"},
-  {id : "2", tittle : "Heineken", price : "$210", pictureUrl : "https://media.tada.com.ar/produc_variant/00000134_a0d8d4b0-81e5-497a-857b-bca78239d4f4.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2", stock: "64"},
-  {id : "3", tittle : "Imperial Golden", price : "$190", pictureUrl : "https://media.tada.com.ar/produc_variant/00001444_adc1afe7-9655-4b88-9ee0-2a8dca2d4528.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2", stock: "17"}
-];
+import axios from 'axios';
 
 function ItemListContainer(props) {
 
@@ -14,10 +9,16 @@ function ItemListContainer(props) {
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
+
+    const getData = async () => {
+      const resp = await axios.get('./cervezas.json');
+      const data = await resp.data;
+      return data;
+  }
   
   const task = new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(data)
+      resolve(getData())
     }, 2000);
   })
 

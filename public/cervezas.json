@@ -1,0 +1,22 @@
+[
+    {
+        "id" : "0",
+        "tittle" : "Patagonia Sendero Sur",
+        "price" : "$230", 
+        "pictureUrl" : "https://media.tada.com.ar/produc_variant/00000484_bdcb56ce-a437-48f3-a96b-916a2841cf9b.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
+        "stock" : "23"
+    },
+    {
+        "id" : "1",
+        "tittle" : "Heineken",
+        "price" : "$210",
+        "pictureUrl" : "https://media.tada.com.ar/produc_variant/00000134_a0d8d4b0-81e5-497a-857b-bca78239d4f4.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
+        "stock" : "64"
+    },
+    {
+        "id" : "2",
+        "tittle" : "Imperial Golden",
+        "price" : "$190",
+        "pictureUrl" : "https://media.tada.com.ar/produc_variant/00001444_adc1afe7-9655-4b88-9ee0-2a8dca2d4528.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
+        "stock" : "17"}
+]

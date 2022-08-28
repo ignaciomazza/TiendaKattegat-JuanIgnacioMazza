@@ -1,6 +1,7 @@
 import './NavBar.css';
 import cart from './../bx-cart.svg';
 import CartWidget from './../Cart/CartWidget.jsx';
+import { Link } from "react-router-dom";
 
 const NavBar = (props) => {
   const {logo} = props;
@@ -11,7 +12,7 @@ const NavBar = (props) => {
             <img src={logo} alt="logo" />
         </div>
         <ul>
-            <li><a href="#">INICIO</a></li>
+            <li><Link to={`/`}>INICIO</Link></li>
             <li><a href="#">TIENDA</a></li>
             <li><a href="#">NOSTROS</a></li>
         </ul>
