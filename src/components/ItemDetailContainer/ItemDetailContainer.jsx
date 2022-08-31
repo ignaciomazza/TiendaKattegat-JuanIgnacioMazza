@@ -6,10 +6,8 @@ import './ItemDetailContainer.css';
 
 const ItemDetailContainer = () => {
 
-  const params = useParams();
-  console.log(params.id)
-
     const [productos, setProductos] = useState([]);
+    const params = useParams();
 
     useEffect(() => {
 
@@ -37,15 +35,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-        {/* <div>{console.log(productos.tittle)}</div> */}
         <ItemDetail key="ItemDetail" tittle={productos.tittle} price={productos.price} stock={productos.stock} pictureUrl={productos.pictureUrl}/>
-        {/* <img src={productos.pictureUrl} alt=""/>
-         <div className='comprar'>
-             <h5>{productos.tittle}</h5>
-             <p>{productos.price}</p>
-             <input type="button" value="Ver detalles de producto"/>
-             <p className='stock'>Stock disponible: {productos.stock}</p>
-          </div> */}
     </div>
   )
 }

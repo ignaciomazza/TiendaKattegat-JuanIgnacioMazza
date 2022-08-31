@@ -13,7 +13,7 @@ const NavBar = (props) => {
         </div>
         <ul>
             <li><Link to={`/`}>INICIO</Link></li>
-            <li><a href="#">TIENDA</a></li>
+            <li><Link to={`/category/all`}>TIENDA</Link></li>
             <li><a href="#">NOSTROS</a></li>
         </ul>
         <CartWidget key="Cart" cart={cart}/>

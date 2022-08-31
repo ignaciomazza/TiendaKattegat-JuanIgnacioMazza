@@ -11,7 +11,7 @@ function Item(props) {
         <div className='comprar'>
             <h5>{title}</h5>
             <p>{price}</p>
-            <Link to={`item-detail/${id}`}><input type="button" value="Ver detalles de producto"/></Link>
+            <Link to={`/item-detail/${id}`}><input type="button" value="Ver detalles de producto"/></Link>
             <p className='stock'>Stock disponible: {stock}</p>
         </div>
     </div>

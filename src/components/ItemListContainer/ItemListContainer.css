@@ -54,3 +54,35 @@ header{
     cursor: pointer;
     opacity: .5;
 }
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 0rem;
+    margin: 2rem 0rem 3rem;
+    width: 100%;
+    background-color: rgb(0, 102, 51);
+}
+
+.nav ul{
+    flex: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav ul li{
+    list-style: none;
+    transition: .7s;
+}
+
+.nav ul li:hover{
+    opacity: .7;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: .8rem;
+}
