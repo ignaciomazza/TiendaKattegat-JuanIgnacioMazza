@@ -9,6 +9,10 @@ const ItemDetailContainer = () => {
     const [productos, setProductos] = useState([]);
     const params = useParams();
 
+    const onAdd = (contador) => {
+      alert("Se han agregado al carrito " + contador + " Heinekens")
+    };
+
     useEffect(() => {
 
       const getData = async () => {
@@ -35,7 +39,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-        <ItemDetail key="ItemDetail" tittle={productos.tittle} price={productos.price} stock={productos.stock} pictureUrl={productos.pictureUrl}/>
+        <ItemDetail key="ItemDetail" tittle={productos.tittle} price={productos.price} stock={productos.stock} pictureUrl={productos.pictureUrl} onAdd={onAdd}/>
     </div>
   )
 }

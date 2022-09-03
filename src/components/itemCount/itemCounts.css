@@ -1,0 +1,58 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20rem 40%;
+    padding: 2rem;
+    gap: 2rem;
+    border: 1px solid black;
+    border-radius: .2rem;
+    background-color: white;
+    box-shadow: 0px 0px 50px rgb(191, 191, 191);
+}
+
+h1{
+    font-size: 2rem;
+    padding: .3rem 2rem;
+    opacity: 1;
+    transition: .5s;
+    background-color: rgb(0, 90, 11);
+    border: 1px solid rgb(0, 90, 11);
+    color: white;
+    border-radius: .2rem;
+}
+
+.carrito{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.carrito button{
+    font-size: 1.5rem;
+    padding: .3rem .9rem;
+    opacity: 1;
+    transition: .5s;
+    background-color: rgb(46, 191, 63);
+    border: 1px solid rgb(46, 191, 63);
+    color: white;
+    border-radius: .2rem;
+}
+
+.carrito button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.carrito p{
+    font-size: 1.5rem;
+    padding: .2rem 6rem;
+    opacity: 1;
+    transition: .5s;
+    background-color: rgb(0, 92, 131);
+    border: 1px solid rgb(0, 92, 131);
+    color: white;
+    border-radius: .2rem;
+}

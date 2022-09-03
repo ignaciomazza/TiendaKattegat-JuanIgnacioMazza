@@ -1,8 +1,11 @@
 import React from 'react'
+import ItemCount from '../itemCount/itemCount.jsx';
 
 const ItemDetail = (props) => {
 
-  const {tittle, price, stock, pictureUrl} = props;
+  const {tittle, price, stock, pictureUrl, onAdd} = props;
+
+  
 
   return (
     <div className='containerProductoDetail'>
@@ -10,7 +13,7 @@ const ItemDetail = (props) => {
         <div className='comprarDetail'>
             <h5>{tittle}</h5>
             <p>{price}</p>
-            <input type="button" value="Comprar"/>
+            <ItemCount initial={1} stock={stock} onAdd={onAdd}/>
             <p className='stockDetail'>Stock disponible: {stock}</p>
         </div>
     </div>
