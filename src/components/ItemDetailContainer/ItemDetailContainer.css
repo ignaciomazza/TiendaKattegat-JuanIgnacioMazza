@@ -60,7 +60,7 @@
 
 .stockDetail{
     font-size: 1.3rem !important;
-    margin-top: 2rem !important;
+    margin-top: .3rem !important;
 }
 
 .carrito{
@@ -68,7 +68,7 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    margin: 0rem 0rem 1rem;
+    margin: 1.5rem 0rem 0rem;
 }
 
 .carrito button{

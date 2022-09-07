@@ -3,18 +3,18 @@ import ItemCount from '../itemCount/itemCount.jsx';
 
 const ItemDetail = (props) => {
 
-  const {tittle, price, stock, pictureUrl, onAdd} = props;
+  const {producto, onAdd} = props;
 
   
 
   return (
     <div className='containerProductoDetail'>
-        <img src={pictureUrl} alt=""/>
+        <img src={producto.pictureUrl} alt=""/>
         <div className='comprarDetail'>
-            <h5>{tittle}</h5>
-            <p>{price}</p>
-            <ItemCount initial={1} stock={stock} onAdd={onAdd}/>
-            <p className='stockDetail'>Stock disponible: {stock}</p>
+            <h5>{producto.tittle}</h5>
+            <p>{producto.price}</p>
+            <ItemCount initial={1} stock={producto.stock} onAdd={onAdd}/>
+            <p className='stockDetail'>Stock disponible: {producto.stock}</p>
         </div>
     </div>
   )

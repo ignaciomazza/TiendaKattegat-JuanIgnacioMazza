@@ -1,12 +1,13 @@
 import './App.css';
 import Rutas from './routes/rutas.jsx';
-import logo from './components/logo.jpg';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
+import { GlobalContext } from './context/CartContext';
 
 function App() {
   return (
     <div>
-      <Rutas/>
+      <GlobalContext>
+        <Rutas/>  
+      </GlobalContext>
     </div>
   );
 }
