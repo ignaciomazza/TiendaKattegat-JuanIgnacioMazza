@@ -1,13 +1,13 @@
 import './App.css';
+import CartProvider from './context/CartContext';
 import Rutas from './routes/rutas.jsx';
-import { GlobalContext } from './context/CartContext';
 
 function App() {
   return (
     <div>
-      <GlobalContext>
-        <Rutas/>  
-      </GlobalContext>
+      <CartProvider>
+        <Rutas/> 
+      </CartProvider>
     </div>
   );
 }

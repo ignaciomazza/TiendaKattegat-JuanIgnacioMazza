@@ -1,11 +1,11 @@
-import React, {createContext, useState} from 'react'
+import React, {useContext, createContext, useState} from 'react'
 
-export const GlobalContext = createContext();
+export const CartContext = createContext();
 
-const CartContext = ({children}) => {   
+export function CartProvider({children}) {   
 
     // const [carrito, setCarrito] = useState([1,2,3,4,5]);
-    // let text = "asd"
+    const text = "asd"
     // const [producto, setProducto] = useState([]);
 
     // const addItem = (item, quantity) => {
@@ -28,13 +28,10 @@ const CartContext = ({children}) => {
     // }
 
   return (
-    <GlobalContext.Provider value={{
-        // carrito, 
-        // text,
-    }}>
+    <CartContext.Provider value={{text}}>
         {children}
-    </GlobalContext.Provider>
+    </CartContext.Provider>
   )
 }
 
-export default CartContext
+export default CartProvider

@@ -5,8 +5,6 @@ const ItemDetail = (props) => {
 
   const {producto, onAdd} = props;
 
-  
-
   return (
     <div className='containerProductoDetail'>
         <img src={producto.pictureUrl} alt=""/>
