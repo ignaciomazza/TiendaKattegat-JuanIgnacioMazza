@@ -13,7 +13,6 @@ const rutas = () => {
   
 
   return (
-    <CartProvider>
       <BrowserRouter>
         <NavBar key="Nav" logo={logo}/>
         <Routes>
@@ -23,8 +22,6 @@ const rutas = () => {
             <Route path="/cart" element={<Cart key="Cart"/>}/>
         </Routes>
       </BrowserRouter>
-    </CartProvider>
-    
   )
 }
 

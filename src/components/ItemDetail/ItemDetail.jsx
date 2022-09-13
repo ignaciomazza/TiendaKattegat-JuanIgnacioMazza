@@ -11,7 +11,7 @@ const ItemDetail = (props) => {
         <div className='comprarDetail'>
             <h5>{producto.tittle}</h5>
             <p>{producto.price}</p>
-            <ItemCount initial={1} stock={producto.stock} onAdd={onAdd}/>
+            <ItemCount initial={1} producto={producto} onAdd={onAdd}/>
             <p className='stockDetail'>Stock disponible: {producto.stock}</p>
         </div>
     </div>

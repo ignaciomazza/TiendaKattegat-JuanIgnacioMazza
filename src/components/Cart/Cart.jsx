@@ -1,14 +1,20 @@
 import React, { useState, useContext } from 'react';
-import { Link } from "react-router-dom";
+import {CartContext} from '../../context/CartContext';
 
-function Cart() {
+const Cart = () => {
+
+  const {carrito} = useContext(CartContext); 
 
   return (
     <div>
-      <p>CART</p>
+      {!carrito.length && <span>No hay items en su carrito</span>}
+      {carrito.length && 
+      <ol>
+        {carrito.map(((item, index) => <li key={index}>{item.tittle} - {item.quantity}</li>))}
+      </ol>}
+      
     </div>
-    
-  );
+  )
 }
 
-export default Cart;
+export default Cart

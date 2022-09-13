@@ -1,22 +1,21 @@
 import React, { useState, useContext } from 'react';
 import { Link } from "react-router-dom";
-import CartProvider from '../../context/CartContext';
+import {CartContext} from '../../context/CartContext';
 
 
 function ItemCount(props) {
 
-  const {initial, stock, onAdd} = props;
+  const {initial, producto, onAdd} = props;
 
   const [counter, setCounter] = useState(initial);
 
-  const {text} = useContext(CartProvider);
+  const {addItem} = useContext(CartContext); 
 
   return (
     <div className='container'>
-      <p>{text}</p>
-      <Link to={`/cart`}><button onClick={() => onAdd(counter)} className="comprarCount">Comprar</button></Link>
+      <Link to={`/cart`}><button onClick={() => addItem(producto, counter)}  className="comprarCount">Comprar</button></Link>
       <div className='carrito'>
-        <button onClick={() => setCounter(counter + 1)} disabled={counter === parseInt(stock)}>+</button>
+        <button onClick={() => setCounter(counter + 1)} disabled={counter === parseInt(producto.stock)}>+</button>
         <p>{counter}</p>
         <button onClick={() => setCounter(counter - 1)} disabled={counter === initial}>-</button>
       </div>
