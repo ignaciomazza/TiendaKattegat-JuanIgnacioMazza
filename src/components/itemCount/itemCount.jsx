@@ -13,7 +13,7 @@ function ItemCount(props) {
 
   return (
     <div className='container'>
-      <Link to={`/cart`}><button onClick={() => addItem(producto, counter)}  className="comprarCount">Comprar</button></Link>
+      <Link to={`/cart`}><button onClick={() => addItem(producto, counter)}  className="comprarCount">Agregar al carrito</button></Link>
       <div className='carrito'>
         <button onClick={() => setCounter(counter + 1)} disabled={counter === parseInt(producto.stock)}>+</button>
         <p>{counter}</p>

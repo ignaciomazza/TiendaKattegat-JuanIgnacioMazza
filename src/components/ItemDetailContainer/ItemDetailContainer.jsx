@@ -24,13 +24,12 @@ const ItemDetailContainer = () => {
       const task = new Promise((resolve, reject) => {
         setTimeout(() => {
           resolve(getData())
-        }, 2000);
+        }, 1000);
       })
   
       task
         .then((resultado) => setProductos(resultado[params.id]))
         .catch((err) => console.log(err))
-        .finally(() => console.log("finalizo la promesa"))
   
       return () => {
             

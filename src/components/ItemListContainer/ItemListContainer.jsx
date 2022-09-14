@@ -25,7 +25,7 @@ function ItemListContainer(props) {
     setTimeout(() => {
       resolve(getData())
       
-    }, 2000);
+    }, 1000);
   })
 
   task
@@ -33,7 +33,6 @@ function ItemListContainer(props) {
       setProductos(resultado)
     })
     .catch((err) => console.log(err))
-    .finally(() => console.log("finalizo la promesa"))
 
   return () => {
       
@@ -58,7 +57,7 @@ const task = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve(getData())
     
-  }, 2000);
+  }, 1000);
 })
 
 task
@@ -66,7 +65,6 @@ task
     setProductosHome(resultado)
   })
   .catch((err) => console.log(err))
-  .finally(() => console.log("finalizo la promesa"))
 
 return () => {
     

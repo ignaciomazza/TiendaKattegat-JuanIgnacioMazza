@@ -1,0 +1,132 @@
+.buttonWidget{
+    background-color: transparent;
+    border: transparent;
+    transition: .5s;
+}
+
+.buttonWidget:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.widget{
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.widgetProductos{
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 5rem;
+    right: 1rem;
+    z-index: 1;
+    border: 1px solid rgb(233, 233, 233);
+    box-shadow: 0px 0px 10px 0px rgb(213, 213, 213);
+    padding: 1rem;
+}
+
+.widgetProductos li{
+    list-style: none;
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: .5rem 0rem;
+}
+
+.cart{
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.eliminarCartWidget{
+    padding: 0.2rem .9rem;
+    transition: .5s;
+    background-color: rgb(40, 164, 55);
+    border: 1px solid rgb(40, 164, 55);
+    color: white;
+    border-radius: .2rem;
+    transition: .6s;
+}
+
+.eliminarCartWidget:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.comprarWidget{
+    padding: 0.3rem .9rem;
+    font-size: 1.1rem;
+    transition: .5s;
+    background-color: rgb(24, 98, 32);
+    border: 1px solid rgb(24, 98, 32);
+    color: white;
+    border-radius: .2rem;
+    transition: .6s;
+}
+
+.comprarWidget:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.CartContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.CartProductos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.CartProductos ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.CartProductos ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 1rem;
+    list-style: none;
+}
+
+.CartProductos ul li p{
+    font-size: 1.5rem;
+}
+
+.eliminarCartProduct{
+    padding: 0.7rem 1.3rem;
+    transition: .5s;
+    background-color: rgb(40, 164, 55);
+    border: 1px solid rgb(40, 164, 55);
+    color: white;
+    border-radius: .2rem;
+    transition: .6s;
+    margin: 0rem 1rem;
+    font-size: 1.5rem;
+}
+
+.eliminarCartProduct:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
