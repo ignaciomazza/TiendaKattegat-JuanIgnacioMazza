@@ -16,7 +16,7 @@ const Cart = () => {
       {carrito.length && 
       <div className='CartProductos'>
         <ul>
-          {carrito.map(((item, index) => <li key={index}><p>{item.tittle} - {item.quantity}</p><button onClick={() => removeItem(item.id)}  className="eliminarCartProduct">Eliminar</button></li>))}
+          {carrito.map(((item, index) => <li key={index}><p>{item.title} - {item.quantity}</p><button onClick={() => removeItem(item.id)}  className="eliminarCartProduct">Eliminar</button></li>))}
         </ul>
         <div>
           <button className="comprarCount">Terminar compra</button>

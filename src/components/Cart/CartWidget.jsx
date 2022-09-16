@@ -25,7 +25,10 @@ const CartWidget = (props) => {
     <div className='cart'>
         {carrito.length && <div className='widget'><button onClick={() => aparecerCart(estado)} className="buttonWidget"><img src={cart} alt="cart" /></button><div><p>{carrito.length}</p></div></div>}
         {estado == true && <div className="widgetProductos">
-          {carrito.map(((item, index) => <li key={index}>{item.tittle} - {item.quantity} <button onClick={() => removeItem(item.id)}  className="eliminarCartWidget">Eliminar</button></li>))}
+          {carrito.map(((item, index) => <li key={index}>{item.title} - {item.quantity} <button onClick={() => {
+            removeItem(item.id)
+            aparecerCart(estado)
+          }}  className="eliminarCartWidget">Eliminar</button></li>))}
           <Link to={`/cart`}><button className="comprarWidget">Terminar compra</button></Link>
         </div>}
     </div>

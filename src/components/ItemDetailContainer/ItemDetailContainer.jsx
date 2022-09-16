@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import ItemDetail from './../ItemDetail/ItemDetail.jsx';
 import './ItemDetailContainer.css';
+import db from '../../services'
+import { doc, collection, getDocs } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
 
@@ -16,9 +18,11 @@ const ItemDetailContainer = () => {
     useEffect(() => {
 
       const getData = async () => {
-        const resp = await axios.get('../cervezas.json');
-        const data = await resp.data;
-        return data;
+        const data = collection(db, "items");
+        const col = await getDocs(data);
+        const res = col.docs.map((doc) => doc={id:doc.id, ...doc.data()} );
+        const product = res.find((el) => el.id == params.id);
+        return product;
       }
     
       const task = new Promise((resolve, reject) => {
@@ -28,7 +32,7 @@ const ItemDetailContainer = () => {
       })
   
       task
-        .then((resultado) => setProductos(resultado[params.id]))
+        .then((resultado) => setProductos(resultado))
         .catch((err) => console.log(err))
   
       return () => {
