@@ -3,7 +3,9 @@ import ItemList from './../ItemList/ItemList.jsx';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
+import db from '../../services'
+import { doc, collection, getDocs } from 'firebase/firestore';
 
 function ItemListContainer(props) {
 
@@ -16,9 +18,10 @@ function ItemListContainer(props) {
   useEffect(() => {
 
     const getData = async () => {
-      const resp = await axios.get('./../cervezas.json');
-      const data = await resp.data;
-      return data;
+      const data = collection(db, "items");
+      const col = await getDocs(data);
+      const res = col.docs.map((doc) => doc={id:doc.id, ...doc.data()} );
+      return res;
   }
   
   const task = new Promise((resolve, reject) => {
@@ -42,11 +45,12 @@ function ItemListContainer(props) {
 useEffect(() => {
 
   const getData = async () => {
-    const resp = await axios.get('./../cervezas.json');
-    const data = await resp.data;
+    const data = collection(db, "items");
+    const col = await getDocs(data);
+    const res = col.docs.map((doc) => doc={id:doc.id, ...doc.data()} );
     const arrayData = []
-    data.forEach(element => {
-      if (element.id == "0" || element.id == "1" || element.id == "2") {
+    res.forEach(element => {
+      if (element.title == "Heineken" || element.title == "Imperial IPA" || element.title == "Patagonia Sendero Sur") {
         arrayData.push(element)
       }
     });
@@ -70,6 +74,28 @@ return () => {
     
 }
 }, [])
+
+// useEffect(() => {
+
+//   const getColData = async () => {
+
+//     try {
+//       const data = collection(db, "items");z
+//       const col = await getDocs(data);
+//       const res = col.docs.map((doc) => doc={id:doc.id, ...doc.data()} );
+//       console.log(res);
+//     } catch (error) {
+//       console.log(error);
+//     }
+
+//   }
+
+//   getColData();
+
+// return () => {
+  
+// }
+// }, [])
 
   return (
     <div>
