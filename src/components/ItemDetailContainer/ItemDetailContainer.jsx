@@ -1,10 +1,9 @@
-import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import ItemDetail from './../ItemDetail/ItemDetail.jsx';
 import './ItemDetailContainer.css';
 import db from '../../services'
-import { doc, collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
 

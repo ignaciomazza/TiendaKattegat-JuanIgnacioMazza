@@ -14,10 +14,8 @@ const CartWidget = (props) => {
   function aparecerCart (valor) {
     if (valor){
       setEstado(false)
-      console.log(estado)
     }else{
       setEstado(true)
-      console.log(estado)
     }
   }
 

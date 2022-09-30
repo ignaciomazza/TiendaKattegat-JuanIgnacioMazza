@@ -5,9 +5,6 @@ import logo from '../components/logo.jpg';
 import NavBar from '../components/NavBar/NavBar.jsx';
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer.jsx';
 import Cart from '../components/Cart/Cart.jsx';
-import ItemList from '../components/ItemList/ItemList.jsx';
-import axios from 'axios';
-import CartProvider from '../context/CartContext.jsx';
 
 const rutas = () => {
   

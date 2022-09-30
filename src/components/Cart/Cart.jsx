@@ -3,7 +3,7 @@ import {CartContext} from '../../context/CartContext';
 import { Link } from "react-router-dom";
 import './Cart.css';
 import db from '../../services'
-import { doc, collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc } from 'firebase/firestore';
 
 const Cart = () => {
 
@@ -33,7 +33,6 @@ const Cart = () => {
         [name]: value
       }
     });
-    console.log(formulario)
   }
 
   const setInFireBase = async (orden) => {
@@ -42,7 +41,7 @@ const Cart = () => {
       const col = await addDoc(data, orden);
       alert("Su numero de orden es: " + col.id)
     } catch (error) {
-      
+      console.log(error)
     }
   }
 
