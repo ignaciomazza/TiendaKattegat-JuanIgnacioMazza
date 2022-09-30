@@ -80,7 +80,7 @@ return () => {
             <div className='textoHeader'>
                 <h1>{h1}</h1>
                 <p>{p}</p>
-                <input type="button" value="Tienda"/>
+                <Link to={`/category/all`}><input type="button" value="Tienda"/></Link>
             </div>
             <img src={logo} alt="logo" />
         </div>}

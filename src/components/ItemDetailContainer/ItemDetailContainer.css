@@ -52,7 +52,7 @@
     flex-direction: row;
     margin: auto;
     margin-top: 3rem;
-    width: 1500px;
+    width: 85%;
     height: 770px;
     border-radius: 1rem;
     box-shadow: 0px 0px 10px 0px rgb(135, 135, 135);
@@ -97,4 +97,60 @@
     border-radius: .2rem;
     background-color: rgb(0, 102, 51);
     border: 1px solid rgb(0, 102, 51);
+}
+
+@media (max-width: 1300px) {
+    .containerProductoDetail img{
+        height: 500px;
+    }
+    .comprarDetail h5{
+        font-size: 2rem;
+    }
+    .comprarDetail p{
+        font-size: 1.5rem;
+        margin: 1rem 0rem;
+    }
+    .stockDetail{
+        font-size: 1rem !important;
+    }
+    .comprarCount{
+        font-size: 1rem;
+        padding: 1rem;
+        font-size: 1rem;
+        margin-top: .2rem;
+    }
+    .carrito p{
+        font-size: 1.5rem;
+        padding: .2rem 6rem;
+        margin: .4rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .containerProductoDetail{
+        margin-top: 1rem;
+    }
+    .containerProductoDetail{
+        flex-direction: column;
+        width: 85%;
+        height: 87vh;
+    }
+    .containerProductoDetail img{
+        height: 300px;
+    }
+    .comprarDetail{
+        width: 100%;
+    }
+    .comprarDetail h5{
+        font-size: 1.5rem;
+    }
+    .comprarDetail p{
+        font-size: 1rem;
+        margin: 1rem 0rem;
+    }
+    .carrito p{
+        font-size: 1.5rem;
+        padding: .2rem 6rem;
+        margin: .4rem;
+    }
 }

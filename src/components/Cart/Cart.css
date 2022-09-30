@@ -86,7 +86,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 92vh;
     gap: 10rem;
 }
 
@@ -95,6 +94,7 @@
     justify-content: center;
     align-items: center;
     gap: 10rem;
+    margin-top: 20vh;
 }
 
 .CartProductos{
@@ -172,4 +172,23 @@
 .volver:hover{
     cursor: pointer;
     opacity: .8;
+}
+
+
+@media (max-width: 800px) {
+    .CartContainer{
+        gap: 2rem;
+        margin: 0rem 0rem 1rem;
+    }
+    .formContainer{
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 0rem;
+    }
+    .CartProductos ul li{
+        flex-direction: column;
+    }
+    .CartProductos ul li p{
+        margin: 1rem 0rem;
+    }
 }

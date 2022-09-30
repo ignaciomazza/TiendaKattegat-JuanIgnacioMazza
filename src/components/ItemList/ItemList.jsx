@@ -1,6 +1,7 @@
 import Item from './../Item/Item.jsx';
 import './ItemList.css';
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function ItemList(props) {
 
@@ -17,7 +18,7 @@ function ItemList(props) {
                 <Item key={index} {...item}/>
             ))}
         </div>
-        {!params.id && <input type="button" value="Ir a tienda" className='ir'/>}
+        {!params.id && <Link to={`/category/all`}><input type="button" value="Ir a tienda" className='ir'/></Link>}
     </div>
   );
 }

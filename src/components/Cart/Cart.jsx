@@ -36,13 +36,19 @@ const Cart = () => {
   }
 
   const setInFireBase = async (orden) => {
-    try {
-      const data = collection(db, "ordenes");
-      const col = await addDoc(data, orden);
-      alert("Su numero de orden es: " + col.id)
-    } catch (error) {
-      console.log(error)
+    console.log(orden.buyer.email)
+    if (orden.buyer.email != "" && orden.buyer.nombre != "" && orden.buyer.apellido != "" && orden.buyer.telefono != "") {
+      try {
+        const data = collection(db, "ordenes");
+        const col = await addDoc(data, orden);
+        alert("Su numero de orden es: " + col.id)
+      } catch (error) {
+        console.log(error)
+      }
+    }else{
+      alert("Complete todos los campos para poder realizar la compra")
     }
+    
   }
 
   return (
@@ -66,8 +72,8 @@ const Cart = () => {
         </div>
       </div>
       <div>
-          <button className="comprarCount" onClick={() => setInFireBase(formulario)}>Terminar compra</button>
-        </div>
+        <button className="comprarCount" onClick={() => setInFireBase(formulario)}>Terminar compra</button>
+      </div>
       </div>
   )
 }
